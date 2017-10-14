@@ -4224,13 +4224,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     max-height: 200px;
   }
 }
-.container > .navbar-header,
+/*.container > .navbar-header,
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
-}
+}*/
 @media (min-width: 768px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
@@ -4498,6 +4498,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-brand {
   color: #777;
+  font-size: 18px;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -5939,12 +5940,14 @@ button.close {
   margin-top: -2px;
 }
 .modal-title {
+  color: black;
   margin: 0;
   line-height: 1.42857143;
 }
 .modal-body {
   position: relative;
   padding: 15px;
+  color: #676767;
 }
 .modal-footer {
   padding: 15px;

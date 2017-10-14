@@ -1,25 +1,58 @@
 $(document).ready(function() {
 // On Click SignIn Button Checks For Valid E-mail And All Field Should Be Filled
 $("#login").click(function() {
-var email = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-	if ($("#loginemail").val() == '' || $("#loginpassword").val() == '') {
-		alert("Please fill all fields!");
-	} else if (!($("#loginemail").val()).match(email)) {
-		alert("Please enter valid Email!");
-	} else {
-		var data = $("#login-form").serialize();
-		$.ajax({
-			type: 'POST',
-			url : 'process/login.php',
-			data: data,
-		 success: function(response){
-		 	window.location.href = 'home.php';
-		 }
+	$("#login-form").validate({
+      rules:
+	  {
+			password: {
+			required: true,
+			},
+			email: {
+            required: true,
+            email: true
+            },
+	   },
+       messages:
+	   {
+            password:{
+                      required: "please enter your password"
+                     },
+            email: "please enter your email address",
+       },
+	   submitHandler: submitForm	
+       });  
+	   /* validation */
+	   
+	   /* login submit */
+	   function submitForm()
+	   {		
+			var data = $("#login-form").serialize();
+				
+			$.ajax({
+				
+			type : 'POST',
+			url  : 'method/process/login.php',
+			data : data,
+			cache: false,
+			success :  function(response)
+			   {				
+					if(response=="home"){
+						window.location.href = "pages/home.php";
+					
+					}
+					else if (response=="admin") {
+						window.location.href = "pages/admin.php";
+						
+					}
+					else if(response=="fail"){	
+						alert('Invalid Email or Password!');
+					}
+			  }
 
-		});
-		// alert("You have successfully Logged in!");
-	$("form")[0].reset();
-	}
+			});
+				return false;
+		}
+
 });
 $("#register").click(function() {
 var name = $("#name").val();
@@ -36,7 +69,7 @@ var email = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
 	} else {
 		$.ajax({
 			type: "POST",
-			url : "process/registerprocess.php",
+			url : "method/process/registerprocess.php",
 			data: dataString,
 			cache: false,
 			

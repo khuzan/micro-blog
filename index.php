@@ -2,12 +2,9 @@
 <html lang="en">
 
 <head>
-
+    <meta http-equiv="Pragma" content="no-cache">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Bangtan Sonyeondan</title>
 
@@ -17,9 +14,9 @@
    <!-- Font awesome CSS -->
     <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.css">
     <!-- Theme CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="vendor/css/grayscale.css" rel="stylesheet">
     <!-- fancybox CSS -->
-    <link rel="stylesheet" type="text/css" href="css/fancybox.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/fancybox.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,9 +24,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- show hide form -->
-    <link href="css/showhide.css" rel="stylesheet">
-     <script src="js/jquery.min.js"></script>
-    <script src="js/showhide.js"></script>
+    <link href="vendor/css/showhide.css" rel="stylesheet">
+     <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/showhide.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -42,7 +39,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i><img src="img/bts.png"></i> <span class="light">BANGTAN </span>SONYEONDAN
+                    <i><img src="vendor/img/bts.png"></i> <span class="light">BANGTAN </span>SONYEONDAN
                 </a>
             </div>
 
@@ -76,10 +73,12 @@
                         <div id="main">
                         <!-- Create Div First For Login Form -->
                         <div id="first">
-                            <form method="POST" id="login-form">
-                                <input id="loginemail" placeholder="email" type="text" name="email">
+                            <form method="POST" action="method/process/login.php" id="login-form">
+                                <input id="loginemail" placeholder="Email" type="text" name="email">
+                                <span id="check-e"></span>
                                 <input id="loginpassword" placeholder="Password" type="password" name="password">
-                                <input id="login" name="btn_login" type="button" value="Sign In">
+                                <span id="check-e"></span>
+                                <input id="login" name="btn_login" type="submit" value="Sign In">
                                     <p id="two">Don't have account? <a class="signup" href="#" id="signup">Sign up here</a></p>
                             </form>
                         </div>
@@ -125,14 +124,14 @@
             <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
               <div class="box">
                 <a href="#" data-toggle="modal" data-target="#1">
-                  <img src="img/bg.jpg">
+                  <img src="vendor/img/bg.jpg">
                 </a>
                 <div class="modal fade" id="1" tabindex="-1" role="dialog">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                       <div class="modal-body">
-                        <img src="img/bg.jpg">
+                        <img src="vendor/img/bg.jpg">
                       </div>
                         <div class="col-md-12 description">
                           <h4>This is the first one on my Gallery</h4>
@@ -145,14 +144,14 @@
             <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
               <div class="box">
                 <a href="#" data-toggle="modal" data-target="#2">
-                  <img src="img/ssx1.jpg">
+                  <img src="vendor/img/ssx1.jpg">
                 </a>
                 <div class="modal fade" id="2" tabindex="-1" role="dialog">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                       <div class="modal-body">
-                        <img src="img/ssx1.jpg">
+                        <img src="vendor/img/ssx1.jpg">
                       </div>
                         <div class="col-md-12 description">
                           <h4>This is the second one on my Gallery</h4>
@@ -165,14 +164,14 @@
             <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
               <div class="box">
                 <a href="#" data-toggle="modal" data-target="#3">
-                  <img src="img/ssx2.jpg">
+                  <img src="vendor/img/ssx2.jpg">
                 </a>
                 <div class="modal fade" id="3" tabindex="-1" role="dialog">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                       <div class="modal-body">
-                        <img src="img/ssx2.jpg">
+                        <img src="vendor/img/ssx2.jpg">
                       </div>
                         <div class="col-md-12 description">
                           <h4>This is the third one on my Gallery</h4>
@@ -185,14 +184,14 @@
             <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
               <div class="box">
                 <a href="#" data-toggle="modal" data-target="#4">
-                  <img src="img/ssx3.jpg">
+                  <img src="vendor/img/ssx3.jpg">
                 </a>
                 <div class="modal fade" id="4" tabindex="-1" role="dialog">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                       <div class="modal-body">
-                        <img src="img/ssx3.jpg">
+                        <img src="vendor/img/ssx3.jpg">
                       </div>
                         <div class="col-md-12 description">
                           <h4>This is the fourth one on my Gallery</h4>
@@ -205,14 +204,14 @@
             <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
               <div class="box">
                 <a href="#" data-toggle="modal" data-target="#5">
-                  <img src="img/tae.jpg">
+                  <img src="vendor/img/tae.jpg">
                 </a>
                 <div class="modal fade" id="5" tabindex="-1" role="dialog">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                       <div class="modal-body">
-                        <img src="img/tae.jpg">
+                        <img src="vendor/img/tae.jpg">
                       </div>
                         <div class="col-md-12 description">
                           <h4>This is the fifth one on my Gallery</h4>
@@ -225,14 +224,14 @@
             <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
               <div class="box">
                 <a href="#" data-toggle="modal" data-target="#6">
-                  <img src="img/ssx4.png">
+                  <img src="vendor/img/ssx4.png">
                 </a>
                 <div class="modal fade" id="6" tabindex="-1" role="dialog">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                       <div class="modal-body">
-                        <img src="img/ssx4.png">
+                        <img src="vendor/img/ssx4.png">
                       </div>
                         <div class="col-md-12 description">
                           <h4>This is the sixth one on my Gallery</h4>
@@ -245,14 +244,14 @@
             <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
               <div class="box">
                 <a href="#" data-toggle="modal" data-target="#7">
-                  <img src="img/ssx5.jpg">
+                  <img src="vendor/img/ssx5.jpg">
                 </a>
                 <div class="modal fade" id="7" tabindex="-1" role="dialog">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                       <div class="modal-body">
-                        <img src="img/ssx5.jpg">
+                        <img src="vendor/img/ssx5.jpg">
                       </div>
                         <div class="col-md-12 description">
                           <h4>This is the seventh one on my Gallery</h4>
@@ -265,14 +264,14 @@
             <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
               <div class="box">
                 <a href="#" data-toggle="modal" data-target="#8">
-                  <img src="img/ssx.jpg">
+                  <img src="vendor/img/ssx.jpg">
                 </a>
                 <div class="modal fade" id="8" tabindex="-1" role="dialog">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                       <div class="modal-body">
-                        <img src="img/ssx.jpg">
+                        <img src="vendor/img/ssx.jpg">
                       </div>
                         <div class="col-md-12 description">
                           <h4>This is the eighth one on my Gallery</h4>
@@ -294,7 +293,7 @@
                 <span><a href="#">YOUTUBE</a></span>
                 <span><a href="#">FACEBOOK</a></span>
             </p>
-            <p><img src="img/logo-footer.png"></p>
+            <p><img src="vendor/img/logo-footer.png"></p>
             <p><b>
                 <span>B</span>
                 <span>T</span>
@@ -312,12 +311,12 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
+    <script src="vendor/js/jquery.easing.min.js"></script>
 
- 
+    <script src="vendor/js/jquery.validate.min.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
+    <script src="vendor/js/grayscale.min.js"></script>
 
     <!-- show/hide js form -->
    
