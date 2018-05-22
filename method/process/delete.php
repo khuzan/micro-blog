@@ -13,7 +13,7 @@
 	$query->bindValue('postid',$_GET['postid']);
 		
 	$query->execute();
-	if (!empty($img)) {
+	if (empty($img)) {
 			unlink("images/".$_GET['picture']);
 		}
 	echo "<script>
